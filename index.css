@@ -915,14 +915,14 @@ footer * {
 
 @media  screen and (max-width: 600px) {
    section{
-      padding: 7rem 0;
+      padding: 6rem 0;
    }
    .hero{
-      padding-top: 8.5rem;
+      padding-top: 8rem;
    }
    .hero__content{
       width: 100%;
-      padding: 0 1rem;
+      padding: 0;
    }
    .hero__content h1 {
       font-size: 1.8rem;
@@ -933,48 +933,77 @@ footer * {
    .hero__images{
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
-      margin-top: 3.5rem;
+      margin: 3rem auto 0;
+      max-width: 22rem;
    }
    .hero__image{
       border-radius: var(--radius-5);
       width: 100%;
       box-shadow: none;
-
    }
    .hero__image:nth-child(1), .hero__image:nth-child(3), .hero__image:nth-child(5){
       display: none;
    }
    .hero__cta{
-      gap: 1rem;
-      margin-top: 1.5rem;
+      gap: 0.8rem;
+      margin: 1.5rem auto 0;
       flex-wrap: wrap;
+      flex-direction: column;
+      align-items: stretch;
+      width: min(100%, 22rem);
    }
    .hero__cta .btn {
-      font-size: 0.75rem;
-      padding: 1rem 1.5rem;
+      font-size: 0.8rem;
+      padding: 1rem 1.2rem;
+      width: 100%;
+      text-align: center;
    }
    .about__container{
       grid-template-columns: 1fr ;
-      gap: 3rem;
+      gap: 2rem;
    }
    .about__left{
       border-radius: 2rem;
       box-shadow: none;
    }
+   .about__right{
+      text-align: left;
+   }
+   .ourPrograms__list{
+      margin-top: 2rem;
+      gap: 1.25rem;
+   }
    .ourPrograms__item{
-      width: 80%;
+      width: 100%;
+      height: auto;
       margin-inline: auto;
+   }
+   .ourPrograms__item-image{
+      height: 13rem;
+      border-radius: 1.25rem;
    }
    .whyUs__container{
       grid-template-columns: 1fr;
+      gap: 2rem;
    }
    .whyUs__right{
       grid-template-columns: 1fr;
-      width: 80%;
+      width: 100%;
       margin-inline: auto;
+   }
+   .whyUs__item{
+      padding: 1rem;
    }
    .ourProcess__list{
       grid-template-columns: 1fr;
+      gap: 2rem;
+   }
+   .ourProcess__item{
+      padding: 2.2rem 1rem 1.4rem;
+   }
+   .ourProcess__item h2{
+      left: 50%;
+      transform: translateX(-50%);
    }
    .testimonials .section__header {
       text-align: left;
@@ -1047,10 +1076,21 @@ footer * {
    }
    .packages__buttons{
       flex-direction: column;
+      width: 100%;
+   }
+   .packages__buttons button{
+      width: 100%;
    }
    .packages tr{
       display: flex;
       flex-direction: column;
+   }
+   .whatsapp-float {
+      right: 1rem;
+      bottom: 1rem;
+      width: 3.2rem;
+      height: 3.2rem;
+      font-size: 1.8rem;
    }
    .packages td, .packages th {
       padding: 0.7rem;

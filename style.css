@@ -563,24 +563,25 @@ nav a:active{
       font-size: 1rem;
    }
    .btn{
-      padding: 1.5rem;
+      padding: 1rem 1.2rem;
       font-size: 0.8rem;
    }
    .container{
       width: var(--container-w-md);
    }
    .nav__content{
-         gap: 3rem;
+      gap: 0.75rem;
    }
    .nav__menu{
       position: fixed;
-      top: 4rem;
+      top: 5rem;
       right: 4%;
       flex-direction: column;
       gap: 0;
-      width: 16rem;
+      width: min(18rem, 92vw);
       display: none;
       perspective: 200px;
+      z-index: 5;
    }
    .nav__menu a {
       background: linear-gradient( var(--color-gray-800) , var(--color-gray-700)) ;
@@ -607,21 +608,27 @@ nav a:active{
       color: var(--color-gray-0);
    }
    .nav__menu-open{
-      display: inline-block;
-      display: flex;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
    }
+   .nav__logo{
+      gap: 0.5rem;
+   }
    .nav__logo img{
-      height: 40px;
+      height: 38px;
    }
    
    .nav__logo .logo-text{
-      font-size: 1.1rem;
+      font-size: 0.95rem;
+      line-height: 1.05;
    }
    
    .nav__logo .logo-text small{
-      font-size: 0.65rem;
+      font-size: 0.62rem;
+   }
+   .theme__btn{
+      font-size: 1.2rem;
    }
    nav{
       height: 5rem;
