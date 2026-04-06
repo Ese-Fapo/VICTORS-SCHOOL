@@ -447,16 +447,53 @@ tbody tr:nth-child(odd){
    background: var(--color-gray-0);
 }
 .reviews-overview{
+   margin-top: 3rem;
+   padding: 1.5rem 2rem;
+   background: #fff;
+   border: 1px solid #e5e7eb;
+   border-radius: var(--radius-6);
+   box-shadow: 0 0.7rem 1.8rem rgba(0, 0, 0, 0.05);
+}
+.reviews-overview__top{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 1rem;
+   padding-bottom: 1rem;
+   margin-bottom: 1.25rem;
+   border-bottom: 1px solid var(--color-gray-100);
+}
+.reviews-overview__brand{
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+}
+.google-wordmark{
+   font-size: 1.15rem;
+   font-weight: 700;
+   letter-spacing: -0.03em;
+}
+.google-blue{ color: #4285f4; }
+.google-red{ color: #ea4335; }
+.google-yellow{ color: #fbbc05; }
+.google-green{ color: #34a853; }
+.reviews-overview__brand-label{
+   font-size: 0.95rem;
+   color: var(--color-gray-500);
+}
+.reviews-overview__badge{
+   padding: 0.35rem 0.7rem;
+   border-radius: 999px;
+   background: #eef7ee;
+   color: #1e8e3e;
+   font-size: 0.82rem;
+   font-weight: 600;
+}
+.reviews-overview__content{
    display: grid;
    grid-template-columns: 1.1fr 1fr;
    gap: 2rem;
    align-items: center;
-   margin-top: 3rem;
-   padding: 1.5rem 2rem;
-   background: #fff;
-   border: 1px solid var(--color-gray-100);
-   border-radius: var(--radius-6);
-   box-shadow: 0 0.7rem 1.8rem rgba(0, 0, 0, 0.05);
 }
 .reviews-overview__summary{
    display: flex;
@@ -484,7 +521,7 @@ tbody tr:nth-child(odd){
 }
 .reviews-overview__bar{
    display: grid;
-   grid-template-columns: 1.2rem 1fr;
+   grid-template-columns: 1.2rem 1fr 2rem;
    gap: 0.75rem;
    align-items: center;
    font-size: 0.9rem;
@@ -499,8 +536,13 @@ tbody tr:nth-child(odd){
 .reviews-overview__bar i{
    display: block;
    height: 100%;
-   background: linear-gradient(90deg, #fbbc04, #ea4335);
+   background: #fbbc04;
    border-radius: 999px;
+}
+.reviews-overview__bar strong{
+   font-size: 0.85rem;
+   color: var(--color-gray-700);
+   text-align: right;
 }
 .swiper-wrapper{
    margin-top: 2rem;
@@ -516,14 +558,28 @@ tbody tr:nth-child(odd){
 .swiper-slide:hover{
    box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.04);
 }
-.review__meta{
+.review__header{
    display: flex;
    align-items: center;
    justify-content: space-between;
    gap: 1rem;
+   margin-bottom: 0.75rem;
+}
+.reviewer{
+   display: flex;
+   gap: 0.85rem;
+   align-items: center;
+}
+.review__dots{
+   font-size: 1.2rem;
+   color: var(--color-gray-400);
+   line-height: 1;
+}
+.review__meta{
+   display: flex;
+   align-items: center;
+   gap: 0.85rem;
    margin-bottom: 1rem;
-   padding-bottom: 0.8rem;
-   border-bottom: 1px solid var(--color-gray-100);
 }
 .review__stars{
    color: #fbbc04;
@@ -537,20 +593,39 @@ tbody tr:nth-child(odd){
 .swiper-slide p{
    line-height: 1.7;
 }
-.testimonial__client{
-   display: flex;
-   gap: 1.5rem;
+.review__source{
+   display: inline-flex;
    align-items: center;
-   margin-top: 1.5rem;
+   gap: 0.45rem;
+   margin-top: 1rem;
+   padding: 0.38rem 0.7rem;
+   border-radius: 999px;
+   background: #f8f9fa;
+   border: 1px solid #e5e7eb;
+   color: var(--color-gray-500);
+   font-size: 0.82rem;
+   font-weight: 500;
+}
+.review__source-wordmark{
+   font-size: 0.9rem;
+   line-height: 1;
+}
+.review__source-label{
+   color: #5f6368;
+   font-weight: 600;
 }
 .testimonial__client-image{
    width: 3rem;
    aspect-ratio: 1/1;
-   border-radius: var(--radius-3);
+   border-radius: 50%;
    overflow: hidden;
+   flex-shrink: 0;
 }
 .testimonial__client-info h5{
-   margin-bottom: 0.2rem;
+   margin-bottom: 0.15rem;
+}
+.testimonial__client-info small{
+   color: var(--color-gray-400);
 }
 
 
@@ -736,8 +811,15 @@ footer * {
       font-size: 2rem;
    }
    .reviews-overview {
-      grid-template-columns: 1fr;
       padding: 1.25rem;
+   }
+   .reviews-overview__top,
+   .reviews-overview__content {
+      grid-template-columns: 1fr;
+      display: grid;
+   }
+   .reviews-overview__top {
+      gap: 0.75rem;
    }
    .reviews-overview__summary {
       align-items: flex-start;
