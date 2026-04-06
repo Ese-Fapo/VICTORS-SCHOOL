@@ -36,8 +36,8 @@
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
    <!--css style-->
-   <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="index.css">
+   <link rel="stylesheet" href="style.css?v=20260406">
+   <link rel="stylesheet" href="index.css?v=20260406">
   
    
 
@@ -339,7 +339,7 @@
  <!--=========== testimony SECECTION =============-->
 
       <section class="testimonials">
-         <div class="container swiper mySwiper ">
+         <div class="container">
             <header class="section__header">
                <h4>real feedback from students & parents</h4>
                <h1>recent reviews</h1>
@@ -348,35 +348,49 @@
             <div class="reviews-overview" aria-label="Google review overview">
                <div class="reviews-overview__top">
                   <div class="reviews-overview__brand" aria-label="Google Reviews">
-                     <span class="google-wordmark">
-                        <span class="google-blue">G</span><span class="google-red">o</span><span class="google-yellow">o</span><span class="google-blue">g</span><span class="google-green">l</span><span class="google-red">e</span>
-                     </span>
-                     <span class="reviews-overview__brand-label">Reviews</span>
+                     <span class="google-icon" aria-hidden="true">G</span>
+                     <div>
+                        <span class="google-wordmark">
+                           <span class="google-blue">G</span><span class="google-red">o</span><span class="google-yellow">o</span><span class="google-blue">g</span><span class="google-green">l</span><span class="google-red">e</span>
+                        </span>
+                        <span class="reviews-overview__brand-label">Reviews</span>
+                     </div>
                   </div>
-                  <span class="reviews-overview__badge">Verified profile</span>
+                  <span class="reviews-overview__badge">Verified business profile</span>
                </div>
 
                <div class="reviews-overview__content">
-                  <div class="reviews-overview__summary">
-                     <span class="reviews-overview__rating">4.9</span>
-                     <div>
-                        <p class="reviews-overview__title">Average client rating</p>
-                        <span class="review__stars" aria-label="4.9 out of 5 stars based on 63 Google reviews">★★★★★</span>
-                        <small>Based on 63 reviews on Google</small>
+                  <div class="reviews-overview__summary-card">
+                     <span class="reviews-overview__eyebrow">Google rating</span>
+                     <div class="reviews-overview__summary">
+                        <span class="reviews-overview__rating">4.9</span>
+                        <div>
+                           <p class="reviews-overview__title">Average client rating</p>
+                           <span class="review__stars" aria-label="4.9 out of 5 stars based on 63 Google reviews">★★★★★</span>
+                           <small>Based on 63 reviews on Google</small>
+                        </div>
                      </div>
+                     <p class="reviews-overview__caption">Trusted by students and parents for admission guidance, visa support, and relocation help.</p>
                   </div>
 
-                  <div class="reviews-overview__bars">
-                     <div class="reviews-overview__bar"><span>5</span><div><i style="width: 92%"></i></div><strong>58</strong></div>
-                     <div class="reviews-overview__bar"><span>4</span><div><i style="width: 6.5%"></i></div><strong>4</strong></div>
-                     <div class="reviews-overview__bar"><span>3</span><div><i style="width: 1.5%"></i></div><strong>1</strong></div>
-                     <div class="reviews-overview__bar"><span>2</span><div><i style="width: 0%"></i></div><strong>0</strong></div>
-                     <div class="reviews-overview__bar"><span>1</span><div><i style="width: 0%"></i></div><strong>0</strong></div>
+                  <div class="reviews-overview__breakdown">
+                     <div class="reviews-overview__breakdown-head">
+                        <strong>Rating breakdown</strong>
+                        <span>63 total reviews</span>
+                     </div>
+                     <div class="reviews-overview__bars">
+                        <div class="reviews-overview__bar"><span>5</span><div><i style="width: 92%"></i></div><strong>58</strong></div>
+                        <div class="reviews-overview__bar"><span>4</span><div><i style="width: 6.5%"></i></div><strong>4</strong></div>
+                        <div class="reviews-overview__bar"><span>3</span><div><i style="width: 1.5%"></i></div><strong>1</strong></div>
+                        <div class="reviews-overview__bar"><span>2</span><div><i style="width: 0%"></i></div><strong>0</strong></div>
+                        <div class="reviews-overview__bar"><span>1</span><div><i style="width: 0%"></i></div><strong>0</strong></div>
+                     </div>
                   </div>
                </div>
             </div>
 
-            <menu class="swiper-wrapper">
+            <div class="swiper mySwiper">
+               <div class="swiper-wrapper">
                <article class="swiper-slide">
                   <div class="review__header">
                      <div class="reviewer">
@@ -544,8 +558,9 @@
                      <span class="review__source-label">Reviews</span>
                   </span>
                </article>
-            </menu>
-            <div class="swiper-pagination"></div>
+               </div>
+               <div class="swiper-pagination"></div>
+            </div>
 
          </div>
       </section>
@@ -622,8 +637,8 @@
          </div>
       </footer>
    
-   <script defer src="./main.js"></script>
-   <script defer src="./index.js"></script>
+   <script defer src="./main.js?v=20260406"></script>
+   <script defer src="./index.js?v=20260406"></script>
    <!-- Floating WhatsApp Button -->
    <a href="https://wa.me/2348052999040?text=Hello%20Rockstar%20Study%20Abroad%2C%20I%20would%20like%20to%20make%20an%20enquiry." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
       <i class="uil uil-whatsapp"></i>

@@ -448,11 +448,11 @@ tbody tr:nth-child(odd){
 }
 .reviews-overview{
    margin-top: 3rem;
-   padding: 1.5rem 2rem;
-   background: #fff;
+   padding: 1.6rem 1.8rem;
+   background: linear-gradient(135deg, #ffffff 0%, #fafcff 100%);
    border: 1px solid #e5e7eb;
-   border-radius: var(--radius-6);
-   box-shadow: 0 0.7rem 1.8rem rgba(0, 0, 0, 0.05);
+   border-radius: 1.5rem;
+   box-shadow: 0 1rem 2.2rem rgba(15, 23, 42, 0.06);
 }
 .reviews-overview__top{
    display: flex;
@@ -466,9 +466,21 @@ tbody tr:nth-child(odd){
 .reviews-overview__brand{
    display: flex;
    align-items: center;
-   gap: 0.5rem;
+   gap: 0.75rem;
+}
+.google-icon{
+   width: 2.25rem;
+   height: 2.25rem;
+   border-radius: 50%;
+   display: grid;
+   place-items: center;
+   background: conic-gradient(#4285f4 0 25%, #ea4335 25% 50%, #fbbc05 50% 75%, #34a853 75% 100%);
+   color: #fff;
+   font-weight: 700;
+   font-size: 1rem;
 }
 .google-wordmark{
+   display: block;
    font-size: 1.15rem;
    font-weight: 700;
    letter-spacing: -0.03em;
@@ -478,22 +490,40 @@ tbody tr:nth-child(odd){
 .google-yellow{ color: #fbbc05; }
 .google-green{ color: #34a853; }
 .reviews-overview__brand-label{
-   font-size: 0.95rem;
+   display: block;
+   font-size: 0.88rem;
    color: var(--color-gray-500);
 }
 .reviews-overview__badge{
-   padding: 0.35rem 0.7rem;
+   padding: 0.4rem 0.8rem;
    border-radius: 999px;
    background: #eef7ee;
    color: #1e8e3e;
    font-size: 0.82rem;
    font-weight: 600;
+   white-space: nowrap;
 }
 .reviews-overview__content{
    display: grid;
-   grid-template-columns: 1.1fr 1fr;
-   gap: 2rem;
-   align-items: center;
+   grid-template-columns: 1.05fr 1fr;
+   gap: 1.5rem;
+   align-items: stretch;
+}
+.reviews-overview__summary-card,
+.reviews-overview__breakdown{
+   border: 1px solid #eef2f7;
+   border-radius: 1.1rem;
+   background: #fff;
+   padding: 1.15rem;
+}
+.reviews-overview__eyebrow{
+   display: inline-block;
+   margin-bottom: 0.85rem;
+   font-size: 0.8rem;
+   font-weight: 700;
+   letter-spacing: 0.08em;
+   text-transform: uppercase;
+   color: #5f6368;
 }
 .reviews-overview__summary{
    display: flex;
@@ -501,19 +531,36 @@ tbody tr:nth-child(odd){
    align-items: center;
 }
 .reviews-overview__rating{
-   font-size: 3rem;
+   font-size: 3.2rem;
    font-weight: 700;
    line-height: 1;
    color: var(--color-gray-900);
 }
 .reviews-overview__title{
-   margin-bottom: 0.3rem;
+   margin-bottom: 0.25rem;
    font-weight: 600;
 }
 .reviews-overview__summary small{
    display: block;
    margin-top: 0.35rem;
    color: var(--color-gray-400);
+}
+.reviews-overview__caption{
+   margin-top: 0.9rem;
+   color: var(--color-gray-500);
+   line-height: 1.6;
+}
+.reviews-overview__breakdown-head{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 1rem;
+   margin-bottom: 0.8rem;
+   color: var(--color-gray-500);
+   font-size: 0.9rem;
+}
+.reviews-overview__breakdown-head strong{
+   color: var(--color-gray-900);
 }
 .reviews-overview__bars{
    display: grid;
@@ -536,7 +583,7 @@ tbody tr:nth-child(odd){
 .reviews-overview__bar i{
    display: block;
    height: 100%;
-   background: #fbbc04;
+   background: linear-gradient(90deg, #fbbc04, #f29900);
    border-radius: 999px;
 }
 .reviews-overview__bar strong{
@@ -544,8 +591,11 @@ tbody tr:nth-child(odd){
    color: var(--color-gray-700);
    text-align: right;
 }
-.swiper-wrapper{
+.mySwiper{
    margin-top: 2rem;
+}
+.swiper-wrapper{
+   margin-top: 0;
    padding-bottom: 5rem;
 }
 .swiper-slide{
@@ -811,7 +861,7 @@ footer * {
       font-size: 2rem;
    }
    .reviews-overview {
-      padding: 1.25rem;
+      padding: 1.2rem;
    }
    .reviews-overview__top,
    .reviews-overview__content {
@@ -821,7 +871,14 @@ footer * {
    .reviews-overview__top {
       gap: 0.75rem;
    }
+   .reviews-overview__badge {
+      justify-self: start;
+   }
    .reviews-overview__summary {
+      align-items: flex-start;
+   }
+   .reviews-overview__breakdown-head {
+      flex-direction: column;
       align-items: flex-start;
    }
    .testimonials .swiper-slide {
