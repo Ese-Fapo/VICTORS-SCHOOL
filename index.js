@@ -15,10 +15,15 @@ const initSwiper = () => {
          clickable: true
       },
       slidesPerView: 1,
-      spaceBetween: 50,
+      spaceBetween: 20,
       breakpoints: {
-         599: {
-            slidesPerView: 3
+         768: {
+            slidesPerView: 2,
+            spaceBetween: 24
+         },
+         1025: {
+            slidesPerView: 3,
+            spaceBetween: 32
          }
       }
    });
